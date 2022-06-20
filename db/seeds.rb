@@ -5,3 +5,24 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+franchises = ["Dr Who", "Stargate"]
+
+franchises.each do |franchise|
+	Franchise.create(name: franchise)
+end
+
+# Dr Who
+10.times do
+	Quote.create( 
+		body: Faker::TvShows::DrWho.unique.quote,
+		franchise_id: 0
+	)
+end
+
+# Stargate
+10.times do
+	Quote.create( 
+		body: Faker::TvShows::Stargate.unique.quote,
+		franchise_id: 1
+	)
+end
