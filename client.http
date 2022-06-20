@@ -1,0 +1,22 @@
+### Index
+GET http://localhost:3000/api/quotes/
+
+### Show
+GET http://localhost:3000/api/quotes/1
+
+### Create
+POST http://localhost:3000/api/quotes/
+Content-Type: application/json
+
+{
+	"franchise_id": 3,
+	"body": "It is possible to commit no mistakes and still lose. That is not weakness, that is life."
+}
+
+### Unsuccessful / invalid post request
+POST http://localhost:3000/api/quotes/
+Content-Type: application/json
+
+{
+	"body": "I should not work"
+}
