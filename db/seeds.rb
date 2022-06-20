@@ -15,7 +15,7 @@ end
 10.times do
 	Quote.create( 
 		body: Faker::TvShows::DrWho.unique.quote,
-		franchise_id: 0
+		franchise_id: 1
 	)
 end
 
@@ -23,6 +23,6 @@ end
 10.times do
 	Quote.create( 
 		body: Faker::TvShows::Stargate.unique.quote,
-		franchise_id: 1
+		franchise_id: 2
 	)
 end
